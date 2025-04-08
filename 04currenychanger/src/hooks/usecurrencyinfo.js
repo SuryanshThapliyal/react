@@ -8,7 +8,6 @@ function useCurrencyInfo(currency){
         .then((response)=> setData(response[currency]))
         // console.log(data);
     }, [currency])
-    console.log(data);
     return data;
 } 
 
