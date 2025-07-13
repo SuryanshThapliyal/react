@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import ThemeBtn from './components/Themebutton'
 import Card from './components/Card'
-import { themeProvider } from './contexts/ThemeContext'
+import { ThemeProvider } from './contexts/ThemeContext'
 
 function App() {
   const [thememode, setThememode] = useState('light')
@@ -22,7 +22,7 @@ function App() {
   }, [thememode])
 
   return (
-  <themeProvider value={{thememode, lightTheme, darkTheme}}>
+  <ThemeProvider value={{thememode, lightTheme, darkTheme}}>
   <div className="flex flex-wrap min-h-screen items-center">
                 <div className="w-full">
                     <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
@@ -34,7 +34,7 @@ function App() {
                     </div>
                 </div>
             </div>
-  </themeProvider>
+  </ThemeProvider>
   )
 }
 
